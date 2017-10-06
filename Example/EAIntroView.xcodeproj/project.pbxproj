@@ -30,6 +30,9 @@
 		55BD96431A7C1CD400A32B7D /* IntroPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55BD96411A7C1CD400A32B7D /* IntroPage.xib */; };
 		55BD96441A7C1CD400A32B7D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BD96421A7C1CD400A32B7D /* MainStoryboard.storyboard */; };
 		EBF16A126D0DFD2E0F231FF0 /* Pods_EAIntroView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1A78CE21A737220BAACB20 /* Pods_EAIntroView.framework */; };
+		FBA46E9B1F876B13001AFC64 /* test@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBA46E9A1F876AFC001AFC64 /* test@2x.gif */; };
+		FBA46E9E1F876F6C001AFC64 /* NWFEAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA46E9D1F876F6C001AFC64 /* NWFEAIntroView.m */; };
+		FBA46EA11F877463001AFC64 /* NWFCustomIntroPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA46EA01F877463001AFC64 /* NWFCustomIntroPageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,11 @@
 		55BD96411A7C1CD400A32B7D /* IntroPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPage.xib; sourceTree = "<group>"; };
 		55BD96421A7C1CD400A32B7D /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		657D51E8AFF41C7AEF44BE4E /* Pods-EAIntroView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAIntroView.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAIntroView/Pods-EAIntroView.release.xcconfig"; sourceTree = "<group>"; };
+		FBA46E9A1F876AFC001AFC64 /* test@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "test@2x.gif"; sourceTree = "<group>"; };
+		FBA46E9C1F876F6C001AFC64 /* NWFEAIntroView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWFEAIntroView.h; sourceTree = "<group>"; };
+		FBA46E9D1F876F6C001AFC64 /* NWFEAIntroView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NWFEAIntroView.m; sourceTree = "<group>"; };
+		FBA46E9F1F877463001AFC64 /* NWFCustomIntroPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWFCustomIntroPageView.h; sourceTree = "<group>"; };
+		FBA46EA01F877463001AFC64 /* NWFCustomIntroPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NWFCustomIntroPageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,10 @@
 				5537CCBF1A7C059F0096FE20 /* AppDelegate.m */,
 				5537CCC01A7C059F0096FE20 /* ViewController.h */,
 				5537CCC11A7C059F0096FE20 /* ViewController.m */,
+				FBA46E9C1F876F6C001AFC64 /* NWFEAIntroView.h */,
+				FBA46E9D1F876F6C001AFC64 /* NWFEAIntroView.m */,
+				FBA46E9F1F877463001AFC64 /* NWFCustomIntroPageView.h */,
+				FBA46EA01F877463001AFC64 /* NWFCustomIntroPageView.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -155,6 +167,7 @@
 		55BD96221A7C1CA600A32B7D /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				FBA46E9A1F876AFC001AFC64 /* test@2x.gif */,
 				55BD96231A7C1CA600A32B7D /* bg1@2x.png */,
 				55BD96241A7C1CA600A32B7D /* bg2@2x.png */,
 				55BD96251A7C1CA600A32B7D /* bg3@2x.png */,
@@ -251,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA46E9B1F876B13001AFC64 /* test@2x.gif in Resources */,
 				5537CCC61A7C059F0096FE20 /* LaunchScreen.xib in Resources */,
 				55BD96321A7C1CA600A32B7D /* bg1@2x.png in Resources */,
 				55BD96331A7C1CA600A32B7D /* bg2@2x.png in Resources */,
@@ -288,7 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		99090C24CBC3972049FF3D4A /* [CP] Copy Pods Resources */ = {
@@ -331,6 +345,8 @@
 				5537CCC81A7C059F0096FE20 /* ViewController.m in Sources */,
 				5537CCCA1A7C059F0096FE20 /* main.m in Sources */,
 				5537CCC71A7C059F0096FE20 /* AppDelegate.m in Sources */,
+				FBA46E9E1F876F6C001AFC64 /* NWFEAIntroView.m in Sources */,
+				FBA46EA11F877463001AFC64 /* NWFCustomIntroPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
